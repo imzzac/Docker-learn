@@ -33,12 +33,12 @@ redisClient.connect();
 
 
 app.get('/', (req,res) => {
-    redisClient.set('products', 'products...'); 
-    res.send('<h1> Hello ZZ  hi</h1>')
+    redisClient.set('products', 'products...');
+    res.send('<h1>    Hello ZZ!   </h1>')
 });
 
 app.get('/data', async (req, res) => {
     const products = await redisClient.get('products');
-    res.send(`<h1> Hello Tresmerge!</h1> <h2>${products}</h2>`);
+    res.send(`<h1> Hello ZZ!</h1> <h2>${products}</h2>`);
 });
 app.listen(PORT, ()=> console.log(`app is running on port : ${PORT}`));
