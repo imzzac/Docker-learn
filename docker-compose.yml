@@ -5,8 +5,6 @@ services:
     image: imzzac/docker-learn
     ports:
       - 4000:4000
-    env_file:
-      - ./.env
     depends_on:
       - mongo
   mongo:
